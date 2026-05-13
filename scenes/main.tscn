@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b821myv7hqira"]
+
+[ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://scenes/paddle.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://chehftx43tu46" path="res://scenes/ceiling.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://da5xhdv15hpe1" path="res://scenes/goal.tscn" id="3_lquwl"]
+
+[node name="Main" type="Node" unique_id=1472984651]
+
+[node name="Paddle" parent="." unique_id=1826390419 instance=ExtResource("1_h2yge")]
+position = Vector2(40, 360)
+
+[node name="Top" parent="." unique_id=529174441 instance=ExtResource("2_1bvp3")]
+rotation = 3.1415927
+
+[node name="Bottom" parent="." unique_id=1058578291 instance=ExtResource("2_1bvp3")]
+position = Vector2(0, 720)
+
+[node name="Left" parent="." unique_id=1421930156 instance=ExtResource("3_lquwl")]
+position = Vector2(0, 360)
+rotation = 1.5707964
+
+[node name="Right" parent="." unique_id=1655674462 instance=ExtResource("3_lquwl")]
+position = Vector2(1280, 360)
+rotation = -1.5707964

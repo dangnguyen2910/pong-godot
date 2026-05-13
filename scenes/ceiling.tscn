@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://chehftx43tu46"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n2tt3"]
+
+[node name="Ceiling" type="StaticBody2D" unique_id=1738201487]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1716132477]
+shape = SubResource("WorldBoundaryShape2D_n2tt3")
