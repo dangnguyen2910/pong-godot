@@ -6,8 +6,10 @@
 
 [node name="Main" type="Node" unique_id=1472984651]
 
-[node name="Paddle" parent="." unique_id=1826390419 instance=ExtResource("1_h2yge")]
+[node name="Paddle 1" parent="." unique_id=1826390419 instance=ExtResource("1_h2yge")]
 position = Vector2(40, 360)
+move_up_action = "paddle_1_move_up"
+move_down_action = "paddle_1_move_down"
 
 [node name="Top" parent="." unique_id=529174441 instance=ExtResource("2_1bvp3")]
 rotation = 3.1415927
@@ -22,3 +24,8 @@ rotation = 1.5707964
 [node name="Right" parent="." unique_id=1655674462 instance=ExtResource("3_lquwl")]
 position = Vector2(1280, 360)
 rotation = -1.5707964
+
+[node name="Paddle2" parent="." unique_id=1718150000 instance=ExtResource("1_h2yge")]
+position = Vector2(1240, 360)
+move_up_action = "p2_moveup"
+move_down_action = "p2_movedown"
