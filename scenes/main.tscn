@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://b821myv7hqira"]
 
 [ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://scenes/paddle.tscn" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://cw5m1lo87kja5" path="res://src/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://chehftx43tu46" path="res://scenes/ceiling.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://da5xhdv15hpe1" path="res://scenes/goal.tscn" id="3_lquwl"]
 
 [node name="Main" type="Node" unique_id=1472984651]
+script = ExtResource("1_jyhfs")
 
 [node name="Paddle 1" parent="." unique_id=1826390419 instance=ExtResource("1_h2yge")]
 position = Vector2(40, 360)
