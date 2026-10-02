@@ -1,33 +1,54 @@
 [gd_scene format=3 uid="uid://b821myv7hqira"]
 
 [ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://scenes/paddle.tscn" id="1_h2yge"]
-[ext_resource type="Script" uid="uid://cw5m1lo87kja5" path="res://src/main.gd" id="1_jyhfs"]
+[ext_resource type="Script" uid="uid://bl22q3se7lcs" path="res://src/Main.cs" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://chehftx43tu46" path="res://scenes/ceiling.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://da5xhdv15hpe1" path="res://scenes/goal.tscn" id="3_lquwl"]
 
 [node name="Main" type="Node" unique_id=1472984651]
 script = ExtResource("1_jyhfs")
 
-[node name="Paddle 1" parent="." unique_id=1826390419 instance=ExtResource("1_h2yge")]
-position = Vector2(40, 360)
-move_up_action = "paddle_1_move_up"
-move_down_action = "paddle_1_move_down"
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1592686329]
+offset_left = -34.0
+offset_top = -19.0
+offset_right = 1325.0
+offset_bottom = 756.0
+color = Color(0, 0, 0, 1)
 
-[node name="Top" parent="." unique_id=529174441 instance=ExtResource("2_1bvp3")]
-rotation = 3.1415927
+[node name="Court" type="Node" parent="." unique_id=351414246]
 
-[node name="Bottom" parent="." unique_id=1058578291 instance=ExtResource("2_1bvp3")]
+[node name="Top" parent="Court" unique_id=529174441 instance=ExtResource("2_1bvp3")]
+rotation = -3.1415925
+
+[node name="Bottom" parent="Court" unique_id=1058578291 instance=ExtResource("2_1bvp3")]
 position = Vector2(0, 720)
 
-[node name="Left" parent="." unique_id=1421930156 instance=ExtResource("3_lquwl")]
+[node name="Left" parent="Court" unique_id=1421930156 instance=ExtResource("3_lquwl")]
 position = Vector2(0, 360)
 rotation = 1.5707964
 
-[node name="Right" parent="." unique_id=1655674462 instance=ExtResource("3_lquwl")]
+[node name="Right" parent="Court" unique_id=1655674462 instance=ExtResource("3_lquwl")]
 position = Vector2(1280, 360)
 rotation = -1.5707964
 
+[node name="Paddle 1" parent="." unique_id=1826390419 instance=ExtResource("1_h2yge")]
+position = Vector2(40, 360)
+script = null
+
 [node name="Paddle2" parent="." unique_id=1718150000 instance=ExtResource("1_h2yge")]
 position = Vector2(1240, 360)
-move_up_action = "p2_moveup"
-move_down_action = "p2_movedown"
+script = null
+
+[node name="UI" type="Node" parent="." unique_id=910037735]
+
+[node name="ScoreLeft" type="Label" parent="UI" unique_id=193403425]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ScoreRight" type="Label" parent="UI" unique_id=743662905]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Status" type="Label" parent="UI" unique_id=1426126074]
+offset_right = 40.0
+offset_bottom = 23.0
